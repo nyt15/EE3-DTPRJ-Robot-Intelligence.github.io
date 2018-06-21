@@ -9,26 +9,44 @@
         <title>Documentation for EE3-DTPRJ: Robot Intelligence</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> -->
+        <!-- Material design -->
+        <link rel="stylesheet" href="vendor/material/css/material-icons.css">
+        <link rel="stylesheet" href="vendor/material/css/bootstrap-material-design.min.css">
 
     </head>
     <body>
-        <div class="container" role="main">
+        <!-- Top navbar -->
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container justify-content-between">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <button class="navbar-toggler" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="https://github.com/EE3-DTPRJ-Robot-Intelligence">GitHub page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="container">
             <div class="jumbotron">
-                <h1>Documentation for EE3-DTPRJ: Robot Intelligence</h1>
-                <p class="lead">
-                    <span>Documentation</span><br />
+                <h1>EE3-DTPRJ: Robot Intelligence</h1>
                     <a class="btn btn-xs btn-primary" href="https://github.com/EE3-DTPRJ-Robot-Intelligence">GitHub Organisation Page</a>
                 </p>
             </div>
 
-            <div class="panel panel-info">
-                <div class="panel-heading"><h3 class="panel-title"></h3></div>
+            <div class="container">
+                <div class="panel-heading"><h3 class="panel-title">Introduction</h3></div>
                 <ul class="list-group">
                     <li class="list-group-item">
-                        Documentation
+                        This is the documentation to the EE3-DTPRJ: Robot Intelligence project.
                     </li>
                 </ul>
+                <div class="panel-heading"><h3 class="panel-title">Table of Content</h3></div>
             </div>
 
         </div><!-- /.container -->
@@ -37,9 +55,11 @@
             ================================================== -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <!-- Placed at the end of the document so the pages load faster -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/popper/popper.min.js"></script>
+            <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+            <!-- Material design -->
+            <script src="vendor/material/js/bootstrap-material-design.js"></script>
 
     </body>
 </html>
