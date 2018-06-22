@@ -6,60 +6,55 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!-- Page title -->
         <title>Documentation for EE3-DTPRJ: Robot Intelligence</title>
 
-        <!-- Bootstrap core CSS -->
-        <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> -->
-        <!-- Material design -->
+        <!-- Bootstrap core CSS: Material design -->
         <link rel="stylesheet" href="vendor/material/css/material-icons.css">
         <link rel="stylesheet" href="vendor/material/css/bootstrap-material-design.min.css">
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="js/custom.js"></script>
 
     </head>
     <body>
-        <!-- Top navbar -->
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container justify-content-between">
-                <a class="navbar-brand" href="index.html">Home</a>
-                <button class="navbar-toggler" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="https://github.com/EE3-DTPRJ-Robot-Intelligence">GitHub page</a></li>
-                    </ul>
+        <!-- Content wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="bg-dark" w3-include-html="toc.html"></div>
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="jumbotron" align="center">
+                        <h1>EE3-DTPRJ: Robot Intelligence</h1>
+                        <a class="btn btn-xs btn-primary" href="https://github.com/EE3-DTPRJ-Robot-Intelligence">GitHub Organisation Page</a>
+                    </div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Introduction</h3>
+                            <p>This is the documentation to the EE3-DTPRJ: Robot Intelligence project.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque lacus eu ligula feugiat, nec tincidunt nisl malesuada. Morbi dapibus ac augue at bibendum. Vivamus tempus gravida massa eget pharetra. In quis purus tincidunt, luctus ligula quis, vehicula mi. Curabitur ultricies nibh venenatis orci tempor, non pharetra tortor fermentum. Donec eget odio at nulla dictum dapibus tristique ac libero. Pellentesque et lobortis magna. Suspendisse ut neque commodo, tristique mauris venenatis, venenatis erat. Nam vitae euismod arcu, vel luctus ante. Aenean nibh elit, varius quis tellus et, porttitor tempor tortor. Duis commodo tristique odio vel egestas. Nulla laoreet ante eu dui cursus aliquet. Fusce pellentesque tortor et tincidunt faucibus. Maecenas id risus ac velit pulvinar malesuada et ac tellus. Morbi cursus massa justo, sed euismod felis convallis in. Nulla placerat orci quis finibus aliquam.</p>
+
+                            <p>In sem mauris, imperdiet bibendum arcu eu, congue dictum nisl. Sed aliquam massa purus, id consectetur felis tempor at. In rhoncus cursus magna. Fusce ac eleifend dolor. Nulla sollicitudin aliquet ligula eleifend porta. Aliquam rhoncus tortor lorem, vitae pellentesque risus vehicula volutpat. Nullam lacus mi, sollicitudin at blandit vitae, dapibus eu justo. Nam vehicula sodales hendrerit. Nam convallis lorem eget sagittis egestas. Sed malesuada aliquam dolor dictum sollicitudin. Duis id arcu eu dolor consequat efficitur et in tortor.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div> <!-- /#page-content-wrapper -->
+        </div> <!-- /#wrapper -->
 
-        <!-- Main content -->
-        <div class="container">
-            <div class="jumbotron">
-                <h1>EE3-DTPRJ: Robot Intelligence</h1>
-                    <a class="btn btn-xs btn-primary" href="https://github.com/EE3-DTPRJ-Robot-Intelligence">GitHub Organisation Page</a>
-                </p>
-            </div>
+        <!-- call includeHTML() -->
+        <script type="text/javascript">includeHTML();</script>
 
-            <div class="container">
-                <div class="panel-heading"><h3 class="panel-title">Introduction</h3></div>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        This is the documentation to the EE3-DTPRJ: Robot Intelligence project.
-                    </li>
-                </ul>
-                <div class="panel-heading"><h3 class="panel-title">Table of Content</h3></div>
-            </div>
-
-        </div><!-- /.container -->
-
-        <!-- Bootstrap core JavaScript
-            ================================================== -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <!-- Placed at the end of the document so the pages load faster -->
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/popper/popper.min.js"></script>
-            <!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
-            <!-- Material design -->
-            <script src="vendor/material/js/bootstrap-material-design.js"></script>
+        <!-- Bootstrap core JavaScript ================================================== -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/popper/popper.min.js"></script>
+        <!-- Bootstrap core JS: Material design -->
+        <script type="text/javascript" src="vendor/material/js/bootstrap-material-design.min.js"></script>
 
     </body>
 </html>
