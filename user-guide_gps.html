@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Page title -->
+        <title>User Guide: GPS</title>
+
+        <!-- Bootstrap core CSS: Material design -->
+        <link rel="stylesheet" href="vendor/material/css/material-icons.css">
+        <link rel="stylesheet" href="vendor/material/css/bootstrap-material-design.min.css">
+
+        <!-- highlight.js -->
+        <link rel="stylesheet" href="vendor/highlight/default.min.css">
+        <script src="vendor/highlight/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="js/custom.js"></script>
+
+    </head>
+
+    <body>
+        <!-- Content wrapper -->
+        <div id="wrapper" class="row">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="bg-dark" w3-include-html="toc.html"></div>
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <h1>User Guide: GPS</h1><hr />
+
+                    <div>
+                        <h3>Setup</h3>
+                        <p>The GPS used was this model: <a href="https://www.ebay.co.uk/itm/Ublox-NEO-M8N-GPS-Compass-with-shell-for-PIX-PX4-Pixhawk-Flight-Controller-UK/252111344885?epid=1088850025&amp;hash=item3ab301d4f5:g:JbQAAOSwQTVV-osy">Ublox GPS NEO-M8N</a></p>
+                        <p>GPS Baud rate: 38400</p>
+                        <p>Wire colours:</p>
+                        <table class="table table-bordered" style="width: auto">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">USB pins</th>
+                                    <th scope="col">Jumper Colours</th>
+                                    <th scope="col">GPS Wire colours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">3V3</th>
+                                    <td>Green</td>
+                                    <td>Red</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">TXD</th>
+                                    <td>Orange</td>
+                                    <td>White</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">RXD</th>
+                                    <td>Yellow</td>
+                                    <td>Yellow</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">GND</th>
+                                    <td>Red</td>
+                                    <td>Black</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div>
+                        <h3>Usage</h3>
+                        <h5>Run python directly</h5>
+                        <ol>
+                            <li>In terminal,
+                                <pre><code class="hljs">sudo chmod 777 /dev/ttyUSB0
+python gps_pyserial.py</code></pre>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <h5>Run ROS</h5>
+                        <ol>
+                            <li>Download nmea_navsat_driver</li>
+                            <li>In terminal,</li>
+                                <pre><code class="hljs">git clone https://github.com/ros-drivers/nmea_navsat_driver.git</code></pre>
+                            <li>Place nmea_navsat_driver package in src of catkin workspace, locate the files:
+                                <ul>
+                                    <li>nmea_serial_driver</li>
+                                    <li>nmea_topic_serial_reader</li>
+                                </ul>
+                                <p>and ensure that the following line is set:</p>
+                                <pre><code class="hljs python">serial_baud = rospy.get_param(<span class="hljs-string">'~baud'</span>, <span class="hljs-number">38400</span>) <span class="hljs-comment"># sets the baud rate to 38400</span></code></pre>
+                            </li>
+                            <li>Add the <code>gps_readable.py</code> file in the same location as the previous 2 files.</li>
+                            <li>In terminal,
+                                <pre><code class="hljs">roscore
+source /devel/setup.bash
+rosrun nmea_navsat_driver nmea_topic_serial_reader
+rosrun nmea_navt_driver gps_readable.py</code></pre>
+                            </li>
+                        </ol>
+                </div>
+
+            </div> <!-- /#page-content-wrapper -->
+        </div> <!-- /#wrapper -->
+
+        <!-- call includeHTML() -->
+        <script type="text/javascript">includeHTML();</script>
+
+        <!-- Bootstrap core JavaScript ================================================== -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="vendor/popper/popper.min.js"></script>
+        <!-- Bootstrap core JS: Material design -->
+        <script type="text/javascript" src="vendor/material/js/bootstrap-material-design.min.js"></script>
+
+    </body>
+</html>
