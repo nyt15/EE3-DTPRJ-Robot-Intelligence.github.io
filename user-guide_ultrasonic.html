@@ -39,7 +39,7 @@
                     <h1>User Guide: Ultrasonic Proximity Sensors</h1><hr />
 
                     <div>
-                        <h3>Setup</h3>
+                        <h2>Setup</h2>
                         <p>The Ultrasonic sensor used: <a href="https://www.sparkfun.com/products/13959">HC-SR04</a></p>
                         <p>The line colours corresponding to the pins are as follows:</p>
                         <table class="table table-bordered" style="width: auto">
@@ -71,23 +71,23 @@
                     </div>
 
                     <div>
-                        <h3>Usage</h3>
-                        <h5>Run Arduino code</h5>
+                        <h2>Usage</h2>
+                        <h3>Run Arduino code</h3>
                         <ul>
                             <li>In Arduino IDE, program the board with the <a href="https://github.com/EE3-DTPRJ-Robot-Intelligence/Documentation-draft/blob/master/Ultrasonic/ultrasonic_hcsr04.ino"><code>ultrasonic_hcsr04.ino</code></a> code</li>
                             <li>Plug the pins according to the definitions in the <code>ultrasonic_hcsr04.ino</code> code</li>
                         </ul>
 
-                        <h5></a>Gain access to port</h5>
+                        <h3></a>Gain access to port</h3>
                             <p>In terminal run,</p>
                             <pre><code class="hljs">sudo chmod 777 /dev/ACM0</code></pre>
 
-                        <h5>Run python directly</h5>
+                        <h3>Run python directly</h3>
                             <a href="https://github.com/EE3-DTPRJ-Robot-Intelligence/Documentation-draft/blob/master/Ultrasonic/ultrasonic.py"><code>ultrasonic.py</code></a>
                             <p>In terminal run,</p>
                             <pre><code class="hljs">python ultrasonic.py</code></pre>
 
-                        <h5>Run ROS</h5>
+                        <h3>Run ROS</h3>
                             <a href="https://github.com/EE3-DTPRJ-Robot-Intelligence/Documentation-draft/blob/master/Ultrasonic/ultrasonic_ros.py"><code>ultrasonic_ros.py</code></a>
                             <p>In terminal run,</p>
                             <pre><code class="hljs">roscore
@@ -97,13 +97,13 @@ rosrun &lt;PACKAGE NAME&gt; ultrasonic_ros.py</code></pre>
                     </div>
 
                     <div>
-                        <h5>Run Quickie</h5>
-                        <h6>Notes for applying ultrasonic data (ROS) with Quickie</h6>
+                        <h3>Run Quickie</h3>
+                        <h4>Notes for applying ultrasonic data (ROS) with Quickie</h4>
                         <p>The idea was to utilise ultrasonic data published in rostopic and implement a safety feature on Quickie. The safety feature was to ensure that Quickie does not head in a direction where obstacles are present within 30 cm of Quickie. That means that Quickie will not respond to any command by the XBox controller which violates the 30 cm distance constraint.</p>
                         <p>In <code>joy_4.py</code> , the constraint is set by the variable ‘safe_distance’ which is set to 30 cm.<br>
                         The distance calculated by each ultrasonic sensor corresponds to the following indexed data of the tuple in ‘ultrasonic_dist_arr’.</p>
                         <p>Here is a diagram of the position of ultrasonic sensors on Quickie:</p>
-                        <p><img src="asset\img\position_of_ultrasonic.png"></p>
+                        <p><img src="asset/img/ultrasonic/position_of_ultrasonic.png"></p>
                         <p>Bearing in mind that distances exceeding the range is set to 0, the algorithm formulated is as follows:</p>
                         <pre><code class="hljs python"><span class="hljs-comment"># If ultrasonic_dist_arr[1/2/3/8] is &lt; safe_distance and &gt; 0,</span>
 <span class="hljs-comment">#       If speed&gt;0,</span>
@@ -113,7 +113,7 @@ rosrun &lt;PACKAGE NAME&gt; ultrasonic_ros.py</code></pre>
 <span class="hljs-comment">#             speed = 0</span>
 <span class="hljs-comment"># If ultrasonic_dist_arr[0/4/5/6] is &lt; safe_distance and &gt; 0,</span>
 <span class="hljs-comment">#       direction = 0</span></code></pre>
-                        <h6>Run Quickie</h6>
+                        <h4>Run Quickie</h4>
                         <p>In terminal run,</p>
                         <pre><code class="hljs">python joy_4.py</code></pre>
 
